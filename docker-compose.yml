@@ -3,10 +3,9 @@ services:
   julian-web:
     build: .
     ports:
-      - "127.0.0.1:5000:80"
+      - "80:80"
     container_name: julian-web
     environment:
-      - VIRTUAL_PORT=5000
       - VIRTUAL_HOST=www.julianschroeter.com,julianschroeter.com
       - LETSENCRYPT_HOST=www.julianschroeter.com,julianschroeter.com
       - LETSENCRYPT_EMAIL=julianschroeter@outlook.com
