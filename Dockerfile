@@ -1,3 +1,2 @@
-FROM nginx:alpine
-EXPOSE 8081
-COPY ./public-html/ /usr/share/nginx/html
+FROM httpd:2.4
+COPY ./public-html/ /usr/local/apache2/htdocs/

@@ -2,17 +2,9 @@ version: "3.8"
 services:
   julian-web:
     build: .
-    ports:
-      - "127.0.0.1:8081:8081"
     container_name: julian-web
     environment:
-      - VIRTUAL_PORT=8081
       - VIRTUAL_HOST=www.julianschroeter.com,julianschroeter.com
       - LETSENCRYPT_HOST=www.julianschroeter.com,julianschroeter.com
       - LETSENCRYPT_EMAIL=julianschroeter@outlook.com
     restart: always
-    networks:
-      - backend
-
-networks:
-  backend:
