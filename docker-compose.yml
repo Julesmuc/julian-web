@@ -1,17 +1,19 @@
 version: "3.8"
 services:
-  julian-web:
-    build: .
+  nginx-web:
+    image: nginx:alpine
     container_name: julian-web
     networks:
       - backend
     expose:
-      - 80
+      - "80"
     restart: always
     environment:
-      - VIRTUAL_PROXY=80
       - VIRTUAL_HOST=www.julianschroeter.com,julianschroeter.com
+      - VIRTUAL_PORT=80
       - LETSENCRYPT_HOST=www.julianschroeter.com,julianschroeter.com
       - LETSENCRYPT_EMAIL=julianschroeter@outlook.com
+    volumes:
+      - ./public-html/:/usr/share/nginx/html:ro
 networks:
   backend:

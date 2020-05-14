@@ -1,2 +1,7 @@
-FROM httpd:2.4
-COPY ./public-html/ /usr/local/apache2/htdocs/
+FROM nginx:alpine
+
+EXPOSE 80
+
+WORKDIR /usr/share/nginx/html 
+
+COPY ./public-html/ ./
