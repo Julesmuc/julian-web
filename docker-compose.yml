@@ -4,7 +4,7 @@ services:
     image: nginx:alpine
     container_name: julian-web
     networks:
-      - backend
+      - proxy
     expose:
       - "80"
     restart: always
@@ -16,4 +16,6 @@ services:
     volumes:
       - ./public-html/:/usr/share/nginx/html:ro
 networks:
-  backend:
+  proxy:
+    external:
+      name: nginx-proxy
