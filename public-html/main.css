@@ -21,6 +21,11 @@
   main {
     flex: 1 0 auto;
 }
+
+.link {
+color: var(--highlight2);
+}
+
 h1,h6,h5,p,h4,.whitetext {
     color : var(--white)
 }
@@ -37,11 +42,17 @@ p {
 
 .cardrounded {
 border-radius: 5px;
+min-height: 38em;
 }
 .padded {
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
 }
-  
+
+.bold {
+  font-weight: bold;
+}  
   .timeline {
     position: relative;
     max-width: 1200px;
@@ -148,5 +159,29 @@ border-radius: 5px;
     
     .timelineright {
     left: 0%;
-    }
+    } 
+  }
+
+
+
+  .svg-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5em;
+  }
+  
+  .svg-icon path,
+  .svg-icon polygon,
+  .svg-icon rect {
+    fill: var(--highlight2);
+  }
+  
+  .svg-icon circle {
+    stroke: var(--highlight2);
+    stroke-width: 1;
+  }
+
+  .progress {
+    height: 30px;
+    border-radius: 7px;
   }
