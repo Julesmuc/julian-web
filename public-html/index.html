@@ -8,7 +8,7 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="main.js"></script>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -30,9 +30,9 @@
         </div>
     </nav>
     <ul id="mobile-demo" class="sidenav">
-        <li><a class="blue-grey darken-4 " href="#experience">Experience</a></li>
-        <li><a class="blue-grey darken-4 " href="#techstack">Tech stack</a></li>
-        <li><a class="blue-grey darken-4 " href="#certificates">Certificates</a></li>
+        <li><a class="blue-grey darken-4 btn" href="#experience">Experience</a></li>
+        <li><a class="blue-grey darken-4 btn" href="#techstack">Tech stack</a></li>
+        <li><a class="blue-grey darken-4 btn" href="#certificates">Certificates</a></li>
         <li><a class="blue-grey darken-4 btn" href="/privacy.html">Imprint</a></li>
     </ul>
 
@@ -190,6 +190,11 @@
             </div>
         </div>
     </main>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large higlight2colorsmall" onclick="totop()">
+            <i class="large material-icons">arrow_upward</i>
+        </a>
+    </div>
     <footer class="page-footer blue-grey darken-4">
         <div class="container">
             <div class="row">
@@ -201,8 +206,15 @@
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.sidenav');
             var instances = M.Sidenav.init(elems);
-        });     
+            M.FloatingActionButton.init(document.querySelectorAll('.fixed-action-btn'));
+        });
+        function totop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
     </script>
+
 </body>
 
 </html>

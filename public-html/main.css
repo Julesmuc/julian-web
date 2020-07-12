@@ -8,6 +8,9 @@
 * {
     box-sizing: border-box;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   
   body {
     background-image: linear-gradient(to right top, #272f40, #3a4757, #4f5f6f, #667987, #7e949f);
@@ -27,6 +30,9 @@ p {
 .higlight2color {
   font-size: 50pt;
   color : var(--highlight2) !important;
+}
+.higlight2colorsmall {
+  background-color : var(--highlight2) !important;
 }
 
 .cardrounded {
