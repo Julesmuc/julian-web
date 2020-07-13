@@ -24,6 +24,7 @@
 
 .link {
 color: var(--highlight2);
+cursor: pointer;
 }
 
 h1,h6,h5,p,h4,.whitetext {
@@ -168,6 +169,11 @@ min-height: 38em;
     width: 25px;
     height: 25px;
     margin-right: 0.5em;
+  }
+  .big{
+    width: 70px;
+    height: 70px;
+    margin-right: 0em;
   }
   
   .svg-icon path,
