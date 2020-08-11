@@ -9,9 +9,9 @@ services:
       - "80"
     restart: always
     environment:
-      - VIRTUAL_HOST=www.julianschroeter.com,julianschroeter.com
+      - VIRTUAL_HOST=www.julianschroeter.com,julianschroeter.com, www.julianschroeter.rocks,julianschroeter.rocks
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=www.julianschroeter.com,julianschroeter.com
+      - LETSENCRYPT_HOST=www.julianschroeter.com,julianschroeter.com, www.julianschroeter.rocks,julianschroeter.rocks
       - LETSENCRYPT_EMAIL=julianschroeter@outlook.com
     volumes:
       - ./public-html/:/usr/share/nginx/html:ro
